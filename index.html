@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KALORIX</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>🔥 KALORIX</h1>
+    <p>Smart Fitness & Nutrition Tracker</p>
+
+    <div class="card">
+        <h2>Přidat jídlo</h2>
+
+        <input id="foodName" placeholder="Název jídla">
+        <input id="calories" type="number" placeholder="Kalorie">
+        <input id="protein" type="number" placeholder="Bílkoviny (g)">
+        <input id="fat" type="number" placeholder="Tuky (g)">
+        <input id="carbs" type="number" placeholder="Sacharidy (g)">
+
+        <button onclick="addFood()">Přidat</button>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <h3>Kalorie</h3>
+            <span id="totalCalories">0</span>
+        </div>
+
+        <div class="stat">
+            <h3>Bílkoviny</h3>
+            <span id="totalProtein">0</span>g
+        </div>
+
+        <div class="stat">
+            <h3>Tuky</h3>
+            <span id="totalFat">0</span>g
+        </div>
+
+        <div class="stat">
+            <h3>Sacharidy</h3>
+            <span id="totalCarbs">0</span>g
+        </div>
+    </div>
+
+    <div class="progress">
+        <div id="progressBar"></div>
+    </div>
+
+    <div class="card">
+        <h2>💧 Pitný režim</h2>
+        <button onclick="addWater()">+250 ml</button>
+        <p id="water">0 ml</p>
+    </div>
+
+    <div class="card">
+        <h2>⚖️ BMI Kalkulačka</h2>
+        <input id="weight" placeholder="Váha (kg)">
+        <input id="height" placeholder="Výška (cm)">
+        <button onclick="calculateBMI()">Spočítat BMI</button>
+        <p id="bmiResult"></p>
+    </div>
+
+    <div class="card">
+        <h2>📈 Statistiky</h2>
+        <canvas id="chart"></canvas>
+    </div>
+
+    <div class="card">
+        <h2>🏆 Achievement</h2>
+        <p id="achievement">Začni zapisovat jídlo!</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
